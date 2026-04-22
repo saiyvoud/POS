@@ -2,8 +2,15 @@ import { Search, Bell, UserCircle } from "lucide-react";
 import { useTheme } from "../config/theme/ThemeContext";
 const NavbarComponents = () => {
   const { theme, toggleTheme } = useTheme();
+
   return (
-    <nav className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 sticky top-0 z-10">
+    <nav
+      className={
+        theme === "light"
+          ? "h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 sticky top-0 z-10"
+          : "h-16 bg-slate-900 border-b border-gray-200 flex items-center justify-between px-6 sticky top-0 z-10"
+      }
+    >
       {/* Search Bar */}
       <div className="relative w-96">
         <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
@@ -12,7 +19,11 @@ const NavbarComponents = () => {
         <input
           type="text"
           placeholder="ຄົ້ນຫາຂໍ້ມູນ..."
-          className="w-full pl-10 pr-4 py-2 bg-gray-100 border-none rounded-lg focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all"
+          className={
+            theme === "light"
+              ? "w-full pl-10 pr-4 py-2  bg-gray-100 border-none rounded-lg focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all"
+              : "w-full pl-10 pr-4 py-2 bg-gray-100 text-black border-none rounded-lg focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all "
+          }
         />
       </div>
 

@@ -21,14 +21,12 @@ export const ThemeProvider = ({ children }) => {
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
+    window.location.reload();
   };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-  
-       {children}
-
-    
+       {children}    
     </ThemeContext.Provider>
   );
 };
