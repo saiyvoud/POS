@@ -4,7 +4,7 @@ const Dashboard = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   // ສີພື້ນຖານຕາມ Theme
-  const bgColor = theme === "light" ? "bg-gray-100" : "bg-[#151821]";
+  const bgColor = theme === "light" ? "bg-red-100" : "bg-[#151821]";
   const cardColor =
     theme === "light"
       ? "bg-white shadow-sm border border-gray-200"
@@ -72,32 +72,7 @@ const Dashboard = () => {
           <section className={`${cardColor} p-6 rounded-2xl`}>
             <LineChart theme={theme} />
           </section>
-          {/* Threat Summary 
-          <section className={`${cardColor} p-6 rounded-2xl h-72 relative`}>
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-medium">Threat Summary</h2>
-              <span className="text-xs text-purple-500 font-mono">
-                June 2024: 29 Threats
-              </span>
-            </div>
-            <div
-              className={`w-full h-40 border-b border-l ${theme === "light" ? "border-gray-200" : "border-gray-700"} relative mt-6`}
-            >
-              <svg
-                className="w-full h-full text-purple-500"
-                viewBox="0 0 100 20"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0 15 Q 10 5, 20 12 T 40 8 T 60 14 T 80 10 T 100 15"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="0.5"
-                />
-              </svg>
-            </div>
-          </section>
-            */}
+    
           {/* Threat Details Table */}
           <section className={`${cardColor} p-6 rounded-2xl`}>
             <h2 className="text-lg font-medium mb-4">Threat Details</h2>
@@ -239,6 +214,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </main>
   );
