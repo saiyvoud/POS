@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "../layout/mainLayout";
 import Dashboard from "../view/dashboard/page/Dashboard";
 import Users from "../view/user/page/User";
+import Sells from "../view/sell/page/Sell";
 
 const RouterPath = () => {
   const router = createBrowserRouter([
@@ -24,6 +25,14 @@ const RouterPath = () => {
       element: (
         <MainLayout>
           <Users />
+        </MainLayout>
+      ),
+    },
+     {
+      path: "/seller",
+      element: (
+        <MainLayout>
+          <Sells />
         </MainLayout>
       ),
     },

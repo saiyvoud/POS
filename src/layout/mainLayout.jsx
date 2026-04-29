@@ -12,7 +12,7 @@ const MainLayout = ({children}) => { // ໃຊ້ children ເພື່ອຮັ
       <SidebarComponents isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex-1 flex flex-col min-w-0">
-        <NavbarComponents />
+        <NavbarComponents isOpen={isOpen} setIsOpen={setIsOpen} />
 
         <main className={theme ==="light" ? "p-4 md:p-8 overflow-y-auto " : "p-4 md:p-8 overflow-y-auto bg-[#151821]" }>
            {/* ເອົາ children ມາແທນບ່ອນນີ້ */}
